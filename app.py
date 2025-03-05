@@ -641,8 +641,8 @@ def handle_postback(event):
                 )
             )
         elif postback_data == 'send_image':
-            url = 'https://drive.google.com/file/d/1uAyHTPwgxL_su4qzFLwHAOiPaR-3kll5/view?usp=drive_link'
-            #url = url_root + 'static/20210322_151237.JPG'
+            #url = 'https://drive.google.com/file/d/1uAyHTPwgxL_su4qzFLwHAOiPaR-3kll5/view?usp=drive_link'
+            url = 'static/20210322_151237.JPG'
             #url = url.replace("http", "https")
             app.logger.info("url=" + url)
             line_bot_api.reply_message(
