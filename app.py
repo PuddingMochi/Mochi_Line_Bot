@@ -75,7 +75,7 @@ app = Flask(__name__)
 
 configuration = Configuration(access_token = os.getenv('CHANNEL_ACCESS_TOKEN'))
 line_handler = WebhookHandler(os.getenv('YOUR_CHANNEL_SECRET'))
-url_root = 'https://github.com/PuddingMochi/Mochi_Line_Bot/blob/4f60b2d8edae6db1a2c936d1d20f1f1497077a7a/'
+url_root = 'https://raw.githubusercontent.com/PuddingMochi/Mochi_Line_Bot/main/'
 
 @app.route("/callback", methods=['POST'])
 def callback():
