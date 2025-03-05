@@ -75,6 +75,7 @@ app = Flask(__name__)
 
 configuration = Configuration(access_token = os.getenv('CHANNEL_ACCESS_TOKEN'))
 line_handler = WebhookHandler(os.getenv('YOUR_CHANNEL_SECRET'))
+url_root = 'https://github.com/PuddingMochi/Mochi_Line_Bot/blob/b97927024df03cb5e62be863828827dd8e3b0d13/'
 
 @app.route("/callback", methods=['POST'])
 def callback():
@@ -148,7 +149,7 @@ def handle_message(event):
                 )
             )
         elif text == '圖片':
-            url = request.url_root + 'static/231031.png'
+            url = url_root + 'static/231031.png'
             url = url.replace("http", "https")
             app.logger.info("url=" + url)
             line_bot_api.reply_message(
@@ -160,7 +161,7 @@ def handle_message(event):
                 )
             )
         elif text == '影片':
-            url = request.url_root + 'static/GAME_20240722-170540.mp4'
+            url = url_root + 'static/GAME_20240722-170540.mp4'
             url = url.replace("http", "https")
             app.logger.info("url=" + url)
             line_bot_api.reply_message(
@@ -172,7 +173,7 @@ def handle_message(event):
                 )
             )
         elif text == '音訊':
-            url = request.url_root + 'static/knights.mp3'
+            url = url_root + 'static/knights.mp3'
             url = url.replace("http", "https")
             app.logger.info("url=" + url)
             duration = 10000  # in milliseconds
@@ -213,7 +214,7 @@ def handle_message(event):
             )
         # Buttons Template
         elif text == '按鈕':
-            url = request.url_root + 'static/1415413-4-1.png'
+            url = url_root + 'static/1415413-4-1.png'
             url = url.replace("http", "https")
             app.logger.info("url=" + url)
             buttons_template = ButtonsTemplate(
@@ -242,7 +243,7 @@ def handle_message(event):
             )
         # Carousel Template
         elif text == '輪播':
-            url = request.url_root + 'static/1415413-4-1.png'
+            url = url_root + 'static/1415413-4-1.png'
             url = url.replace("http", "https")
             app.logger.info("url=" + url)
             carousel_template = CarouselTemplate(
@@ -285,7 +286,7 @@ def handle_message(event):
             )
         # ImageCarousel Template
         elif text == '圖片輪播':
-            url = request.url_root + 'static/'
+            url = url_root + 'static/'
             url = url.replace("http", "https")
             app.logger.info("url=" + url)
             image_carousel_template = ImageCarouselTemplate(
@@ -464,13 +465,13 @@ def handle_message(event):
                 )
             )
         elif text == 'imagemap':
-            url1 = request.url_root + 'static/imagemap'
+            url1 = url_root + 'static/imagemap'
             url1 = url1.replace("http", "https")
             app.logger.info("url=" + url1)
-            url2 = request.url_root + 'static/GAME_20240722-170540.mp4'
+            url2 = url_root + 'static/GAME_20240722-170540.mp4'
             url2 = url2.replace("http", "https")
             app.logger.info("url=" + url2)
-            url3 = request.url_root + 'static/preview.png'
+            url3 = url_root + 'static/preview.png'
             url3 = url3.replace("http", "https")
             app.logger.info("url=" + url3)
 
@@ -513,15 +514,15 @@ def handle_message(event):
                 )
             )
         if text == 'quick_reply':
-            postback_icon = request.url_root + 'static/postback.png'
+            postback_icon = url_root + 'static/postback.png'
             postback_icon = postback_icon.replace("http", "https")
-            message_icon = request.url_root + 'static/message.png'
+            message_icon = url_root + 'static/message.png'
             message_icon = message_icon.replace("http", "https")
-            datetime_icon = request.url_root + 'static/calendar.png'
+            datetime_icon = url_root + 'static/calendar.png'
             datetime_icon = datetime_icon.replace("http", "https")
-            date_icon = request.url_root + 'static/calendar.png'
+            date_icon = url_root + 'static/calendar.png'
             date_icon = date_icon.replace("http", "https")
-            time_icon = request.url_root + 'static/time.png'
+            time_icon = url_root + 'static/time.png'
             time_icon = time_icon.replace("http", "https")
 
             quickReply = QuickReply(
@@ -639,7 +640,7 @@ def handle_postback(event):
                 )
             )
         elif postback_data == 'send_image':
-            url = request.url_root + 'static/20210322_151237.JPG'
+            url = url_root + 'static/20210322_151237.JPG'
             url = url.replace("http", "https")
             app.logger.info("url=" + url)
             line_bot_api.reply_message(
