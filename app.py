@@ -76,7 +76,7 @@ app = Flask(__name__)
 configuration = Configuration(access_token = os.getenv('CHANNEL_ACCESS_TOKEN'))
 line_handler = WebhookHandler(os.getenv('YOUR_CHANNEL_SECRET'))
 #url_root = 'https://github.com/PuddingMochi/Mochi_Line_Bot/blob/main/'
-url_root = 'https://github.com/PuddingMochi/Mochi_Line_Bot/blob/main/'
+url_root = 'https://puddingmochi.github.io/Mochi_Line_Bot/'
 
 @app.route("/callback", methods=['POST'])
 def callback():
@@ -150,7 +150,7 @@ def handle_message(event):
                 )
             )
         elif text == '圖片':
-            url = url_root + 'static/231031.png' + '?raw=true'
+            url = url_root + 'static/231031.png'
             url = url.replace("http", "https")
             app.logger.info("url=" + url)
             line_bot_api.reply_message(
@@ -162,7 +162,7 @@ def handle_message(event):
                 )
             )
         elif text == '影片':
-            url = url_root + 'static/GAME_20240722-170540.mp4' + '?raw=true'
+            url = url_root + 'static/GAME_20240722-170540.mp4'
             url = url.replace("http", "https")
             app.logger.info("url=" + url)
             line_bot_api.reply_message(
@@ -215,7 +215,7 @@ def handle_message(event):
             )
         # Buttons Template
         elif text == '按鈕':
-            url = url_root + 'static/1415413-4-1.png' + '?raw=true'
+            url = url_root + 'static/1415413-4-1.png'
             url = url.replace("http", "https")
             app.logger.info("url=" + url)
             buttons_template = ButtonsTemplate(
@@ -244,7 +244,7 @@ def handle_message(event):
             )
         # Carousel Template
         elif text == '輪播':
-            url = url_root + 'static/1415413-4-1.png' + '?raw=true'
+            url = url_root + 'static/1415413-4-1.png'
             url = url.replace("http", "https")
             app.logger.info("url=" + url)
             carousel_template = CarouselTemplate(
@@ -287,7 +287,7 @@ def handle_message(event):
             )
         # ImageCarousel Template
         elif text == '圖片輪播':
-            url = url_root + 'static/' + '?raw=true'
+            url = url_root + 'static/'
             url = url.replace("http", "https")
             app.logger.info("url=" + url)
             image_carousel_template = ImageCarouselTemplate(
@@ -466,13 +466,13 @@ def handle_message(event):
                 )
             )
         elif text == 'imagemap':
-            url1 = url_root + 'static/imagemap' + '?raw=true'
+            url1 = url_root + 'static/imagemap'
             url1 = url1.replace("http", "https")
             app.logger.info("url=" + url1)
-            url2 = url_root + 'static/GAME_20240722-170540.mp4' + '?raw=true'
+            url2 = url_root + 'static/GAME_20240722-170540.mp4'
             url2 = url2.replace("http", "https")
             app.logger.info("url=" + url2)
-            url3 = url_root + 'static/preview.png' + '?raw=true'
+            url3 = url_root + 'static/preview.png'
             url3 = url3.replace("http", "https")
             app.logger.info("url=" + url3)
 
@@ -515,15 +515,15 @@ def handle_message(event):
                 )
             )
         if text == 'quick_reply':
-            postback_icon = url_root + 'static/postback.png' + '?raw=true'
+            postback_icon = url_root + 'static/postback.png'
             postback_icon = postback_icon.replace("http", "https")
-            message_icon = url_root + 'static/message.png' + '?raw=true'
+            message_icon = url_root + 'static/message.png'
             message_icon = message_icon.replace("http", "https")
-            datetime_icon = url_root + 'static/calendar.png' + '?raw=true'
+            datetime_icon = url_root + 'static/calendar.png'
             datetime_icon = datetime_icon.replace("http", "https")
-            date_icon = url_root + 'static/calendar.png' + '?raw=true'
+            date_icon = url_root + 'static/calendar.png'
             date_icon = date_icon.replace("http", "https")
-            time_icon = url_root + 'static/time.png' + '?raw=true'
+            time_icon = url_root + 'static/time.png'
             time_icon = time_icon.replace("http", "https")
 
             quickReply = QuickReply(
