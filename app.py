@@ -150,8 +150,9 @@ def handle_message(event):
                 )
             )
         elif text == '圖片':
-            url = url_root + 'static/231031.png'
-            url = url.replace("http", "https")
+            #url = url_root + 'static/231031.png'
+            #url = url.replace("http", "https")
+            url = 'https://i.imgur.com/iLDesSr.png'
             app.logger.info("url=" + url)
             line_bot_api.reply_message(
                 ReplyMessageRequest(
@@ -162,8 +163,9 @@ def handle_message(event):
                 )
             )
         elif text == '影片':
-            url = url_root + 'static/GAME_20240722-170540.mp4'
-            url = url.replace("http", "https")
+            #url = url_root + 'static/GAME_20240722-170540.mp4'
+            #url = url.replace("http", "https")
+            url = 'https://i.imgur.com/RZmq1u4.mp4'
             app.logger.info("url=" + url)
             line_bot_api.reply_message(
                 ReplyMessageRequest(
@@ -215,8 +217,9 @@ def handle_message(event):
             )
         # Buttons Template
         elif text == '按鈕':
-            url = url_root + 'static/1415413-4-1.png'
-            url = url.replace("http", "https")
+            #url = url_root + 'static/1415413-4-1.png'
+            #url = url.replace("http", "https")
+            url = 'https://i.imgur.com/qj1qAII.png'
             app.logger.info("url=" + url)
             buttons_template = ButtonsTemplate(
                 thumbnail_image_url=url,
@@ -244,8 +247,9 @@ def handle_message(event):
             )
         # Carousel Template
         elif text == '輪播':
-            url = url_root + 'static/1415413-4-1.png'
-            url = url.replace("http", "https")
+            #url = url_root + 'static/1415413-4-1.png'
+            #url = url.replace("http", "https")
+            url = 'https://i.imgur.com/qj1qAII.png'
             app.logger.info("url=" + url)
             carousel_template = CarouselTemplate(
                 columns=[
@@ -293,21 +297,24 @@ def handle_message(event):
             image_carousel_template = ImageCarouselTemplate(
                 columns=[
                     ImageCarouselColumn(
-                        image_url=url+'1415413-4-1.png',
+                        #image_url=url+'1415413-4-1.png',
+                        image_url = 'https://i.imgur.com/qj1qAII.png',
                         action=URIAction(
                             label='놀러와마이홈漫畫',
                             uri='https://page.kakao.com/content/48772021'
                         )
                     ),
                     ImageCarouselColumn(
-                        image_url=url+'1415413-4-2.png',
+                        #image_url=url+'1415413-4-2.png',
+                        image_url = 'https://i.imgur.com/kukgTOV.png',
                         action=URIAction(
                             label='光遇的燒錢商店',
                             uri='http://thatskyshop.com/?srsltid=AfmBOorEda8cCHKblHJL5PFK3-subRaYYKhI2KvQF93WILvtI6N0BmGr'
                         )
                     ),
                     ImageCarouselColumn(
-                        image_url=url+'1415413-4-3.png',
+                        #image_url=url+'1415413-4-3.png',
+                        image_url = 'https://i.imgur.com/tPXA5ts.png',
                         action=URIAction(
                             label='夢幻城資訊',
                             uri='https://forum.gamer.com.tw/B.php?bsn=75719'
@@ -469,11 +476,13 @@ def handle_message(event):
             url1 = url_root + 'static/imagemap'
             url1 = url1.replace("http", "https")
             app.logger.info("url=" + url1)
-            url2 = url_root + 'static/GAME_20240722-170540.mp4'
-            url2 = url2.replace("http", "https")
+            #url2 = url_root + 'static/GAME_20240722-170540.mp4'
+            #url2 = url2.replace("http", "https")
+            url2 = 'https://i.imgur.com/RZmq1u4.mp4'
             app.logger.info("url=" + url2)
-            url3 = url_root + 'static/preview.png'
-            url3 = url3.replace("http", "https")
+            #url3 = url_root + 'static/preview.png'
+            #url3 = url3.replace("http", "https")
+            url3 = 'https://i.imgur.com/0MOcyJD.png'
             app.logger.info("url=" + url3)
 
             imagemap_message = ImagemapMessage(
@@ -515,16 +524,21 @@ def handle_message(event):
                 )
             )
         if text == 'quick_reply':
-            postback_icon = url_root + 'static/postback.png'
-            postback_icon = postback_icon.replace("http", "https")
-            message_icon = url_root + 'static/message.png'
-            message_icon = message_icon.replace("http", "https")
-            datetime_icon = url_root + 'static/calendar.png'
-            datetime_icon = datetime_icon.replace("http", "https")
-            date_icon = url_root + 'static/calendar.png'
-            date_icon = date_icon.replace("http", "https")
-            time_icon = url_root + 'static/time.png'
-            time_icon = time_icon.replace("http", "https")
+            #postback_icon = url_root + 'static/postback.png'
+            #postback_icon = postback_icon.replace("http", "https")
+            #message_icon = url_root + 'static/message.png'
+            #message_icon = message_icon.replace("http", "https")
+            #datetime_icon = url_root + 'static/calendar.png'
+            #datetime_icon = datetime_icon.replace("http", "https")
+            #date_icon = url_root + 'static/calendar.png'
+            #date_icon = date_icon.replace("http", "https")
+            #time_icon = url_root + 'static/time.png'
+            #time_icon = time_icon.replace("http", "https")
+            postback_icon = 'https://i.imgur.com/LLO4uKI.png'
+            message_icon = 'https://i.imgur.com/V4QJdDU.png'
+            datetime_icon = 'https://i.imgur.com/MBe8kcO.png'
+            date_icon = 'https://i.imgur.com/MBe8kcO.png'
+            time_icon = 'https://i.imgur.com/5izaTp1.png'
 
             quickReply = QuickReply(
                 items=[
