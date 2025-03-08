@@ -176,8 +176,9 @@ def handle_message(event):
                 )
             )
         elif text == '音訊':
-            url = url_root + 'static/knights.mp3'
-            url = url.replace("http", "https")
+            #url = url_root + 'static/knights.mp3'
+            #url = url.replace("http", "https")
+            url = 'https://res.cloudinary.com/dmxvf8yqt/video/upload/v1741433598/knights_ii3rvg.mp3'
             app.logger.info("url=" + url)
             duration = 10000  # in milliseconds
             line_bot_api.reply_message(
