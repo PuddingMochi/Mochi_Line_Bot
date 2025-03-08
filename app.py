@@ -474,8 +474,9 @@ def handle_message(event):
                 )
             )
         elif text == 'imagemap':
-            url1 = url_root + 'static/imagemap'
-            url1 = url1.replace("http", "https")
+            #url1 = url_root + 'static/imagemap'
+            #url1 = url1.replace("http", "https")
+            url1 = 'https://res.cloudinary.com/dmxvf8yqt/image/upload/v1741433597'
             app.logger.info("url=" + url1)
             #url2 = url_root + 'static/GAME_20240722-170540.mp4'
             #url2 = url2.replace("http", "https")
